@@ -27,11 +27,7 @@ class H4StatelessWidget extends StatelessWidget{
           child: const Text('Düğmeye Tıkla'),
         ),
     ]
-
-
     ),
   );
 }
-
-
 }
