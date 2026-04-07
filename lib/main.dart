@@ -20,7 +20,8 @@ import 'package:provider/provider.dart';
 
 //import 'Deneme.dart';
 
-/*void main() {
+/*
+void main() {
   runApp(const MyApp());
 }
 
@@ -42,6 +43,8 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -55,7 +58,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: GirisModel(),
+        home: const GirisModel(),
       ),
     );
   }

@@ -1,11 +1,8 @@
 import 'package:bim324mobiluygulamagelistirme/AppDrawer.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import '../CustomAppBar.dart';
-import 'GirisServis.dart';
 
 class AnaSayfa extends StatelessWidget {
   final User user;
@@ -22,7 +19,7 @@ class AnaSayfa extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Hoşgeldiniz, ${user.email}'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text('Kullanıcı ID: ${user.uid}'),
           ],
         ),

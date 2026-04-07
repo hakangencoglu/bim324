@@ -1,15 +1,15 @@
 import 'package:bim324mobiluygulamagelistirme/AppDrawer.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'SayfaIki.dart';
 
 class SayfaBir extends StatelessWidget{
+  const SayfaBir({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Navigasyon Örneği"),
+        title: const Text("Navigasyon Örneği"),
       ) ,
       drawer: const AppDrawer(),
           /*
@@ -58,7 +58,7 @@ class SayfaBir extends StatelessWidget{
                 ),
                ),*/
           },
-          child: Text("İkinci Sayfaya Geç"),
+          child: const Text("İkinci Sayfaya Geç"),
         ),
       ),
 

@@ -1,19 +1,20 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class H3_1 extends StatelessWidget{
+  const H3_1({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: Text("İlk Örnek"),
+              title: const Text("İlk Örnek"),
             ),
             body:
             Column(
                 children:<Widget>[
 
-                  Text(
+                  const Text(
                     "Stateless Widget Örneği",
                     style: TextStyle(
                       fontSize: 30,
@@ -25,7 +26,7 @@ class H3_1 extends StatelessWidget{
                   ),
                   ElevatedButton(
                     onPressed: () {},
-                    child: Text("Düğmeye Tıkla"),
+                    child: const Text("Düğmeye Tıkla"),
                   ),
                 ]
             )

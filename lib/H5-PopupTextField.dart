@@ -1,8 +1,9 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class H5PopupTextField extends StatefulWidget{
+  const H5PopupTextField({super.key});
+
   @override
   H5PTFState createState() => H5PTFState();
 }
@@ -15,7 +16,7 @@ class H5PTFState extends State<H5PopupTextField>{
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text("Alert Dialog"),
+            title: const Text("Alert Dialog"),
             content: Column(
               children: [
                 Text(
@@ -26,11 +27,11 @@ class H5PTFState extends State<H5PopupTextField>{
             actions: [
               TextButton(
                   onPressed: (){},
-                  child: Text("Text Butonu")
+                  child: const Text("Text Butonu")
               ),
               ElevatedButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  child: Text("Kapamak için Tıkla"),
+                  child: const Text("Kapamak için Tıkla"),
               )
             ],
           );
@@ -45,13 +46,13 @@ class H5PTFState extends State<H5PopupTextField>{
       children: [
         TextField(
           controller: textController,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: "Metin Giriniz",
           ),
         ),
         ElevatedButton(
             onPressed: popupAc,
-            child: Text("Popup ı göster"),
+            child: const Text("Popup ı göster"),
         )
 
 

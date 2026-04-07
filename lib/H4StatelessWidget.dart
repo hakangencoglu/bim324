@@ -1,9 +1,10 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class H4StatelessWidget extends StatelessWidget{
-  int a=0;
+ int a=0;
+
+  H4StatelessWidget({super.key});
   @override
   Widget build(BuildContext context){
   return Scaffold(
@@ -13,7 +14,7 @@ class H4StatelessWidget extends StatelessWidget{
       children:[
         Text(
         'Stateless widget örneği $a',
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.red,
           fontSize: 30,
           fontFamily: 'Times New Roman'
@@ -23,7 +24,7 @@ class H4StatelessWidget extends StatelessWidget{
           onPressed: () {
             a++;
           },
-          child: Text('Düğmeye Tıkla'),
+          child: const Text('Düğmeye Tıkla'),
         ),
     ]
 

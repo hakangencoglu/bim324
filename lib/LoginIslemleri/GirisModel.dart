@@ -21,7 +21,7 @@ class GirisModel extends StatelessWidget {
           final user = snapshot.data;
           return user == null ? GirisSayfasi() : AnaSayfa(user: user);
         }
-        return Scaffold(
+        return const Scaffold(
           body: Center(
             child: CircularProgressIndicator(),
           ),

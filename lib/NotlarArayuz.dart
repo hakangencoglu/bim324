@@ -1,14 +1,13 @@
 
 // main.dart dosyasında UI bileşenlerini kullanarak CRUD işlemlerini gösteren örnek:
-import 'package:flutter/cupertino.dart';
 // SQLite veritabanı ile etkileşim kurmak için gerekli paketler import edilir.
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
-import 'dart:io';
 import 'DatabaseHelper.dart';
 import 'Note.dart';
 
 class NotelarArayuz extends StatefulWidget {
+  const NotelarArayuz({super.key});
+
   @override
   NotelarArayuzState createState() => NotelarArayuzState();
 }
@@ -48,23 +47,23 @@ class NotelarArayuzState extends State<NotelarArayuz> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Notlarım (SQLite)')),
+        appBar: AppBar(title: const Text('Notlarım (SQLite)')),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
               TextField(
                 controller: _titleController,
-                decoration: InputDecoration(labelText: 'Başlık'),
+                decoration: const InputDecoration(labelText: 'Başlık'),
               ),
               TextField(
                 controller: _contentController,
-                decoration: InputDecoration(labelText: 'İçerik'),
+                decoration: const InputDecoration(labelText: 'İçerik'),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: _addNote,
-                child: Text('Not Ekle'),
+                child: const Text('Not Ekle'),
               ),
               Expanded(
                 child: ListView.builder(
@@ -76,7 +75,7 @@ class NotelarArayuzState extends State<NotelarArayuz> {
                         title: Text(note.title),
                         subtitle: Text(note.content),
                         trailing: IconButton(
-                          icon: Icon(Icons.delete),
+                          icon: const Icon(Icons.delete),
                           onPressed: () => _deleteNote(note.id!),
                         ),
                       ),

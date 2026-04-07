@@ -72,7 +72,7 @@ class _ProfilEkraniState extends State<ProfilEkrani> {
 
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser;
+    //final user = FirebaseAuth.instance.currentUser;
     return Scaffold(
       appBar: const CustomAppBar(title: "Profil Ekranı"),
       drawer: const AppDrawer(),

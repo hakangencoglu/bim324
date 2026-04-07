@@ -9,7 +9,7 @@ class SnackbarBildirim {
       SnackBar(
         content: Text(mesaj),
         backgroundColor: Colors.green,
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
       ),
     );
   }
@@ -20,7 +20,7 @@ class SnackbarBildirim {
       SnackBar(
         content: Text(mesaj),
         backgroundColor: Colors.red,
-        duration: Duration(seconds: 2),
+        duration: const Duration(seconds: 2),
       ),
     );
   }

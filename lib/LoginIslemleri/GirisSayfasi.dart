@@ -5,6 +5,8 @@ import '../CustomAppBar.dart';
 import 'GirisServis.dart';
 
 class GirisSayfasi extends StatefulWidget {
+  const GirisSayfasi({super.key});
+
   @override
   _GirisSayfasiState createState() => _GirisSayfasiState();
 }
@@ -49,7 +51,7 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
 
     if (user == null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           content: Text('Bir hata oluştu. Lütfen tekrar deneyin.'),
           backgroundColor: Colors.red,
         ),
@@ -69,7 +71,7 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
             children: [
               TextFormField(
                 controller: _epostaKontrol,
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: const InputDecoration(labelText: 'Email'),
                 keyboardType: TextInputType.emailAddress,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -83,7 +85,7 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
               ),
               TextFormField(
                 controller: _parolaKontrol,
-                decoration: InputDecoration(labelText: 'Şifre'),
+                decoration: const InputDecoration(labelText: 'Şifre'),
                 obscureText: true,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -95,9 +97,9 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
                   return null;
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               if (_isLoading)
-                CircularProgressIndicator()
+                const CircularProgressIndicator()
               else
                 ElevatedButton(
                   onPressed: _submit,

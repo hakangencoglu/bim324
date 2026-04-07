@@ -13,7 +13,7 @@ class DepolamaHizmeti {
 
   // Profil resmini Firebase Storage'a yükler ve URL'sini döner
   Future<String> profilResmiYukle(File resimDosyasi) async {
-    final dosyaAdi = Uuid().v4();
+    final dosyaAdi = const Uuid().v4();
     final dosyaYolu = 'profilResimleri/$dosyaAdi.jpg';
     final yedek = _depolama.ref().child(dosyaYolu);
 

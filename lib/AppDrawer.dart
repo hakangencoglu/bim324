@@ -34,7 +34,7 @@ class AppDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ProfilEkrani(),
+                  builder: (context) => const ProfilEkrani(),
                 ),
               );
 
@@ -45,7 +45,7 @@ class AppDrawer extends StatelessWidget {
             title: const Text('Çıkış Yap'),
             onTap: () => Provider.of<GirisServis>(context, listen: false).signOut(),
               leading: IconButton(
-                icon: Icon(Icons.logout),
+                icon: const Icon(Icons.logout),
                 onPressed: () {
                   //Provider.of<GirisServis>(context, listen: false).signOut();
                   },

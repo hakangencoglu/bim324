@@ -7,6 +7,8 @@ import 'DepolamaHizmeti.dart';
 import 'SnackbarBildirim.dart';
 
 class ProfilSayfasi extends StatefulWidget {
+  const ProfilSayfasi({super.key});
+
   @override
   _ProfilSayfasiDurumu createState() => _ProfilSayfasiDurumu();
 }
@@ -89,11 +91,11 @@ class _ProfilSayfasiDurumu extends State<ProfilSayfasi> {
     } else if (_profilResimUrl != null) {
       resimGorunumu = NetworkImage(_profilResimUrl!);
     } else {
-      resimGorunumu = AssetImage('assets/default_avatar.png');
+      resimGorunumu = const AssetImage('assets/default_avatar.png');
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text('Profil')),
+      appBar: AppBar(title: const Text('Profil')),
 
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -106,19 +108,19 @@ class _ProfilSayfasiDurumu extends State<ProfilSayfasi> {
                 backgroundImage: resimGorunumu,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               controller: _isimDenetleyici,
-              decoration: InputDecoration(labelText: 'İsim'),
+              decoration: const InputDecoration(labelText: 'İsim'),
             ),
             TextField(
               controller: _biyografiDenetleyici,
-              decoration: InputDecoration(labelText: 'Biyografi'),
+              decoration: const InputDecoration(labelText: 'Biyografi'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _profiliGuncelle,
-              child: Text('Profili Güncelle'),
+              child: const Text('Profili Güncelle'),
             )
           ],
         ),

@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-import 'package:bim324mobiluygulamagelistirme/AppDrawer.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'ogrenci.dart';
 
 class OgrenciListesi extends StatefulWidget {
+  const OgrenciListesi({super.key});
+
   @override
   State<OgrenciListesi> createState() => _OgrenciListesiState();
 }
@@ -47,8 +47,8 @@ class _OgrenciListesiState extends State<OgrenciListesi> {
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              TextField(controller: adCtrl, decoration: InputDecoration(labelText: 'Ad')),
-              TextField(controller: yasCtrl, decoration: InputDecoration(labelText: 'Yaş'), keyboardType: TextInputType.number),
+              TextField(controller: adCtrl, decoration: const InputDecoration(labelText: 'Ad')),
+              TextField(controller: yasCtrl, decoration: const InputDecoration(labelText: 'Yaş'), keyboardType: TextInputType.number),
             ],
           ),
           actions: [
@@ -60,7 +60,7 @@ class _OgrenciListesiState extends State<OgrenciListesi> {
                 });
                 Navigator.pop(context);
               },
-              child: Text("Kaydet"),
+              child: const Text("Kaydet"),
             ),
           ],
         );

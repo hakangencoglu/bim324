@@ -1,8 +1,9 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class H4StatefulWidget extends StatefulWidget{
+  const H4StatefulWidget({super.key});
+
   @override
   H4SWState createState() => H4SWState();
 }
@@ -18,7 +19,7 @@ class H4SWState extends State<H4StatefulWidget>{
   Widget build(BuildContext con){
     return Scaffold(
       appBar: AppBar(
-        title: Text("Statfull Widget Örneği"),
+        title: const Text("Statfull Widget Örneği"),
       ),
       body: Container(
         child: Row(
@@ -28,16 +29,16 @@ class H4SWState extends State<H4StatefulWidget>{
               Text("Mwtin Yazılan Kısım $a"),
               ElevatedButton(
                 onPressed: artirmaFonksionu,
-                child: Text("Buttonun Adı"),
+                child: const Text("Buttonun Adı"),
               ),
         ],
             ),
             Column(
                 children: [
-                  Text("Metin Yazılan kısım 2"),
+                  const Text("Metin Yazılan kısım 2"),
                   ElevatedButton(
                     onPressed: (){},
-                    child: Text("Button2 nin Adı"),
+                    child: const Text("Button2 nin Adı"),
                   ),
                 ]
             ),
